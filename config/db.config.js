@@ -18,6 +18,6 @@ const db = new Sequelize('web_lanjut', 'avnadmin', 'AVNS_rgEcguDBcGfPZcZ1iWf', {
 });
 export default db;
 
-/*(async()=>{
+(async()=>{
 await db.sync({ alter: true });
-})();*/
+})();
