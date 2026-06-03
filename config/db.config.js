@@ -1,11 +1,16 @@
 import { Sequelize } from "sequelize";
 import mysql2 from 'mysql2';
-const db = new Sequelize('web_lanjut', 'root', '', {
-  host: "localhost",
+const db = new Sequelize('web_lanjut', 'avnadmin', 'AVNS_rgEcguDBcGfPZcZ1iWf', {
+  host: "mysql-293598b2-jonokademangan-9655.a.aivencloud.com",
   dialect: "mysql",
+  port:13323,
   
   dialectOptions: {
+    
     charset: 'utf8mb4',     // Ganti charset menjadi utf8 atau utf8mb4
+    ssl: {
+      rejectUnauthorized: false
+    },
   },
   "define": {
     "timestamps": false
@@ -13,6 +18,6 @@ const db = new Sequelize('web_lanjut', 'root', '', {
 });
 export default db;
 
-(async()=>{
+/*(async()=>{
 await db.sync({ alter: true });
-})();
+})();*/
